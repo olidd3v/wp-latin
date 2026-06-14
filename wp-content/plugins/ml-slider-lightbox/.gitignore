@@ -1,0 +1,12 @@
+.DS_Store
+/node_modules/
+*.log
+*.swp
+.idea
+
+*.code-workspace
+/dist
+/vendor
+/ml-slider-lightbox
+.claude/
+.env

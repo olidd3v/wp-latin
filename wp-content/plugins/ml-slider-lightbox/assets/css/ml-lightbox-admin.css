@@ -1,0 +1,1411 @@
+/**
+ * MetaSlider Lightbox - Admin Styles
+ *
+ * All administrative interface styles for the MetaSlider Lightbox plugin
+ */
+
+/* ==========================================================================
+   ADMIN LAYOUT
+   ========================================================================== */
+div#wpcontent,
+.gallery-pro_page_ml-gallery-editor #wpcontent {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.ml-lightbox-wrap {
+    margin: 0;
+}
+
+.ml-lightbox-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ml-lightbox-content .notice {
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   ADMIN HEADER
+   ========================================================================== */
+.ml-lightbox-header {
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%);
+    color: white;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.ml-lightbox-header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ml-lightbox-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.ml-lightbox-logo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.ml-lightbox-logo svg {
+    width: 100%;
+    height: 100%;
+    fill: white !important;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
+}
+
+.ml-lightbox-logo svg path {
+    fill: white !important;
+}
+
+.ml-lightbox-header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.ml-lightbox-header p {
+    font-size: 1.1em;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.ml-lightbox-header .version {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-left: 15px;
+}
+
+/* ==========================================================================
+   TAB NAVIGATION
+   ========================================================================== */
+.nav-tab-wrapper {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-tab {
+    position: relative;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #646970;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 3px solid #F5F7F8
+}
+
+.nav-tab:hover {
+    background: rgba(221, 105, 35, 0.1);
+    color: #dd6923;
+    border-bottom: 3px solid #BA581C;
+}
+
+.nav-tab-active {
+	font-weight: bold;
+	border-bottom: 3px solid #BA581C;
+	color: #BA581C;
+}
+
+.nav-tab-active:hover {
+    border-bottom: 3px solid #BA581C;
+}
+
+.nav-tab-active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%);
+}
+
+/* ==========================================================================
+   TAB CONTENT
+   ========================================================================== */
+.tab-content {
+    margin-top: 0 !important;
+    animation: fadeIn 0.3s ease-in-out;
+    padding: 0 10px;
+}
+
+.tab-content h2 {
+    color: #1d2327;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.tab-content .form-table {
+    margin-top: 10px;
+}
+
+.tab-content .form-table th {
+    color: #1d2327;
+    font-weight: normal;
+    padding: 15px 10px 15px 0;
+    width: 200px;
+    background: transparent;
+}
+
+.tab-content .form-table th:empty {
+    display: none;
+}
+
+
+
+.tab-content .form-table tr:last-child {
+    border-bottom: none;
+}
+
+.tab-content .form-table td {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+.tab-content .form-table td input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: #dd6923;
+}
+
+.tab-content .form-table td select {
+    min-width: 250px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.tab-content .form-table td select:focus {
+    border-color: #dd6923;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(221, 105, 35, 0.1);
+}
+
+.tab-content .form-table td .description {
+    color: #646970;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.tab-content .form-table td output {
+    position: absolute;
+    margin-left: 10px;
+    top: 1px;
+}
+
+/* ==========================================================================
+   SUBMIT BUTTON
+   ========================================================================== */
+.tab-content .submit {
+    margin-top: 30px;
+    padding: 20px 0;
+    border-top: 1px solid #f1f1f1;
+    border-radius: 0 0 8px 8px;
+}
+
+.tab-content .submit .button-primary {
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 4px rgba(221, 105, 35, 0.3) !important;
+    transition: all 0.3s ease !important;
+    text-shadow: none !important;
+}
+
+.tab-content .submit .button-primary:hover {
+    background: linear-gradient(135deg, #c55a1e 0%, #a14818 100%) !important;
+    box-shadow: 0 4px 8px rgba(221, 105, 35, 0.4) !important;
+    transform: translateY(-1px) !important;
+}
+
+.tab-content .submit .button-primary:active {
+    transform: translateY(0) !important;
+}
+
+/* ==========================================================================
+   ADMIN NOTICES
+   ========================================================================== */
+.ml-lightbox-notice {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0073aa;
+    background: #f7f7f7;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ml-lightbox-notice.success {
+    border-left-color: #46b450;
+    background: #f0f8f0;
+}
+
+.ml-lightbox-notice.warning {
+    border-left-color: #ffb900;
+    background: #fff8e5;
+}
+
+.ml-lightbox-notice.error {
+    border-left-color: #dc3232;
+    background: #fbeaea;
+}
+
+.ml-lightbox-notice p {
+    margin: 0;
+}
+
+.ml-lightbox-notice p:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.ml-lightbox-notice strong {
+    color: inherit;
+}
+
+/* ==========================================================================
+   TOGGLE SWITCH CARD STYLES (Automatic Tab)
+   ========================================================================== */
+.ml-toggle-card input[type="checkbox"] {
+    display: none;
+}
+
+.ml-toggle-card {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	border-bottom: 1px solid #f0f0f0;
+	background: #fff;
+	padding: 25px;
+}
+
+.ml-toggle-card:last-child {
+    border-bottom: none;
+}
+
+.ml-toggle-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.ml-toggle-title {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: #1d2327;
+	margin: 0 0 6px 0;
+	line-height: 1.4;
+}
+
+.ml-toggle-description {
+    font-size: 14px;
+    color: #646970;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ml-toggle-control {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.ml-toggle-switch {
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    background: #ddd;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.ml-toggle-switch::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.15s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ml-toggle-card input[type="checkbox"]:checked + .ml-toggle-switch {
+    background: #dd6923;
+}
+
+.ml-toggle-card input[type="checkbox"]:checked + .ml-toggle-switch::before {
+    transform: translateX(20px);
+}
+
+.ml-toggle-switch:hover {
+    background: #c9c9c9;
+}
+
+.ml-toggle-card input[type="checkbox"]:checked + .ml-toggle-switch:hover {
+    background: #c55a1e;
+}
+
+.ml-toggle-card input[type="checkbox"]:focus + .ml-toggle-switch {
+    outline: 2px solid rgba(221, 105, 35, 0.3);
+    outline-offset: 2px;
+}
+
+.ml-toggle-card input[type="checkbox"]:disabled + .ml-toggle-switch {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.ml-toggle-card input[type="checkbox"]:disabled + .ml-toggle-switch:hover {
+    background: #ddd;
+}
+
+.ml-toggle-card:has(input[type="checkbox"]:disabled) .ml-toggle-title {
+    opacity: 0.6;
+}
+
+/* Sub-setting styles (nested/dependent options) */
+.ml-sub-setting {
+    margin-left: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #f0f0f0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.ml-sub-setting .ml-toggle-card {
+    background: #f9f9f9;
+}
+
+.ml-sub-setting .ml-toggle-title {
+    font-size: 1rem;
+}
+
+.ml-toggle-card:has(input[type="checkbox"]:disabled) .ml-toggle-description {
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   SETTINGS FIELD (for dropdowns and other controls)
+   ========================================================================== */
+
+.tab-content .form-table tr:has(.ml-settings-field) th {
+    display: none;
+}
+
+.tab-content .form-table tr:has(.ml-settings-field) td {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.ml-settings-field {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+}
+
+.ml-settings-field:last-child {
+    border-bottom: none;
+}
+
+.ml-settings-field-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.ml-settings-field-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1d2327;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+
+.ml-settings-field-description {
+    font-size: 14px;
+    color: #646970;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ml-settings-field-control {
+    flex-shrink: 0;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.ml-settings-field-control select.ml-select2-manual-post-types,
+.ml-settings-field-control select.ml-select2-post-types,
+.ml-settings-field-control select.ml-select2-pages,
+.ml-settings-field-control select.ml-select2-posts,
+.ml-settings-field-control select.ml-select2-cpt {
+    width: 100%;
+    max-width: 500px;
+}
+
+.ml-settings-field-control textarea.ml-css-selectors-textarea {
+	width: 75%;
+	max-width: 500px;
+	padding: 8px 12px;
+	border: 1px solid #e2e8f0 !important;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,.06) !important;
+	border-radius: 4px;
+	font-size: 14px;
+	font-family: monospace;
+	line-height: 1.5;
+	transition: border-color 0.3s ease;
+	float: right;
+}
+
+.ml-settings-field-control textarea.ml-css-selectors-textarea:focus {
+    border-color: #dd6923;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(221, 105, 35, 0.1);
+}
+
+.ml-lightbox-content .select2-selection {
+	border: 1px solid #e2e8f0 !important;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,.06) !important;
+	padding: 0;
+}
+
+.ml-settings-field-control .small-text {
+	border: 1px solid #e2e8f0 !important;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,.06) !important;
+	padding: 5px 10px;
+	width: 100px !important;
+	margin-top: 10px;
+}
+
+
+/* ==========================================================================
+   CONTENT FILTERING MODE TOGGLE
+   ========================================================================== */
+.ml-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.ml-toggle-button {
+    cursor: pointer;
+    background: #ddd;
+    color: #646970;
+    padding: 10px 20px;
+    border: 1px solid #c3c4c7;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.ml-toggle-button:first-child {
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px;
+}
+
+.ml-toggle-button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.ml-toggle-button.active {
+    background: #dd6923;
+    color: #fff;
+    z-index: 1;
+}
+
+.ml-toggle-button input[type="radio"] {
+    display: none;
+}
+
+.ml-toggle-button:hover {
+    background: #c9c9c9;
+    color: #1d2327;
+}
+
+.ml-toggle-button.active:hover {
+    background: #c55a1e;
+    color: #fff;
+}
+
+.ml-mode-description {
+    color: #646970;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.ml-filter-description {
+    color: #646970;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.ml-appearance-card {
+	background: #fff;
+	padding: 25px;
+	margin: 20px 0;
+}
+
+.ml-appearance-card h2 {
+	margin: 0;
+}
+
+/* ==========================================================================
+   COLOR PICKER STYLES
+   ========================================================================== */
+.wp-picker-container .wp-picker-clear {
+    vertical-align: top !important;
+    margin-left: 6px !important;
+    height: 30px !important;
+    line-height: 28px !important;
+}
+
+.wp-picker-container .wp-picker-input-wrap {
+    vertical-align: top !important;
+}
+
+.ml-lightbox-content .wp-picker-input-wrap label {
+    display: inline!Important;
+}
+
+.ml-lightbox-content .wp-color-result-text {
+    display: none;
+}
+
+.ml-color-inline {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.ml-color-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.ml-color-field label {
+    font-weight: 500;
+    color: #1d2327;
+    font-size: 13px;
+    margin-bottom: 3px;
+    white-space: nowrap;
+}
+
+.ml-color-inline .wp-picker-container {
+    display: block;
+    position: relative;
+}
+
+.ml-color-inline .wp-picker-input-wrap {
+    display: none !important;
+}
+
+.ml-color-inline .wp-picker-clear {
+    display: none !important;
+}
+
+.ml-color-inline .wp-picker-container.wp-picker-active .wp-picker-input-wrap {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+}
+
+.ml-color-inline .wp-picker-container.wp-picker-active .wp-picker-clear {
+    display: inline-block !important;
+}
+
+.ml-color-inline .wp-picker-holder {
+    position: absolute !important;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.ml-color-inline .iris-picker {
+    position: absolute !important;
+}
+
+.ml-color-field:hover::before {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1d2327;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 10000;
+    margin-bottom: 8px;
+    pointer-events: none;
+}
+
+.ml-color-field:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 3px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #1d2327;
+    z-index: 10000;
+}
+
+/* ==========================================================================
+   MANUAL OPTIONS HOW-TO TOGGLES
+   ========================================================================== */
+.manual-options-content {
+    margin-top: 20px;
+}
+
+.ml-how-to-toggle {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+}
+
+.ml-how-to-toggle summary {
+    padding: 12px 15px;
+    background: #f7f7f7;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px 3px 0 0;
+    font-weight: 600;
+    color: #1d2327;
+    transition: background 0.3s ease;
+}
+
+.ml-how-to-toggle summary:hover {
+    background: #f0f0f0;
+    color: #dd6923;
+}
+
+.ml-how-to-toggle[open] summary {
+    border-bottom: 1px solid #ddd;
+    background: #dd6923;
+    color: white;
+}
+
+.ml-how-to-content {
+    padding: 15px;
+}
+
+.ml-how-to-content ol {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.ml-how-to-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.ml-how-to-content h4 {
+    color: #dd6923;
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+}
+
+.ml-how-to-content code {
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #d73502;
+}
+
+.ml-how-to-content pre {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    overflow-x: auto;
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.ml-how-to-content pre code {
+    background: none;
+    padding: 0;
+    color: #333;
+}
+
+.ml-how-to-content img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ml-how-to-content p em {
+    color: #646970;
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   PRO UPGRADE TAB
+   ========================================================================== */
+.pro-upgrade-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pro-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.pro-header h2 {
+    font-size: 2.5em;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    border: none;
+    color: #dd6923;
+}
+
+.pro-header p {
+    font-size: 1.2em;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.pro-features {
+    margin-bottom: 40px;
+}
+
+.pro-features h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1d2327;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(221, 105, 35, 0.15);
+    border-color: #dd6923;
+}
+
+.feature-icon {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.feature-item h4 {
+    color: #1d2327;
+    font-size: 1.3em;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #646970;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.pro-cta {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #dd6923;
+    position: relative;
+    overflow: hidden;
+}
+
+.pro-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(221, 105, 35, 0.05) 50%, transparent 70%);
+    animation: shine 3s ease-in-out infinite;
+}
+
+.pro-cta h3 {
+    color: #1d2327;
+    font-size: 2em;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.pro-cta p {
+    color: #646970;
+    font-size: 1.1em;
+    margin: 0 0 25px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.pro-upgrade-btn {
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 15px 40px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(221, 105, 35, 0.4) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 1 !important;
+    text-shadow: none !important;
+}
+
+.pro-upgrade-btn:hover {
+    background: linear-gradient(135deg, #c55a1e 0%, #a14818 100%) !important;
+    box-shadow: 0 6px 20px rgba(221, 105, 35, 0.5) !important;
+    transform: translateY(-2px) !important;
+    color: white !important;
+}
+
+.pro-upgrade-btn:active {
+    transform: translateY(0) !important;
+}
+
+.pro-guarantee {
+    margin-top: 20px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.pro-guarantee small {
+    color: #646970;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   PRO FEATURE ADS (When Pro is NOT active)
+   ========================================================================== */
+.ml-pro-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(221, 105, 35, 0.3);
+}
+
+.ml-pro-features-table {
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.ml-pro-feature-ad {
+    background: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ml-pro-feature-ad:last-child {
+    border-bottom: none;
+}
+
+.ml-pro-feature-ad th {
+    color: #646970 !important;
+    font-weight: 500;
+    padding: 20px !important;
+}
+
+.ml-pro-feature-ad td {
+    padding: 20px !important;
+}
+
+/* Toggle Switch for Pro Ads */
+.ml-toggle-switch-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 44px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.ml-toggle-switch-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.ml-toggle-switch-slider {
+    position: absolute;
+    cursor: not-allowed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.ml-toggle-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.15s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ml-toggle-switch-checkbox:checked + .ml-toggle-switch-slider {
+    background-color: #dd6923;
+}
+
+.ml-toggle-switch-checkbox:checked + .ml-toggle-switch-slider:before {
+    transform: translateX(20px);
+}
+
+/* Lock Icon*/
+.ml-pro-setting {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.ml-pro-setting:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.ml-pro-setting:focus {
+    outline: 2px solid rgba(221, 105, 35, 0.3);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+.dashicons-lock.ml-pro-setting::before {
+	background-color: #feb123;
+	border-radius: 50%;
+	padding: 4px;
+}
+
+/* Pro CTA Button in Behavior Tab */
+.tab-content .ml-pro-cta {
+    margin-top: 40px;
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dd6923;
+    border-radius: 12px;
+}
+
+.tab-content .ml-pro-cta .button-primary {
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 15px 40px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(221, 105, 35, 0.4) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.tab-content .ml-pro-cta .button-primary:hover {
+    background: linear-gradient(135deg, #c55a1e 0%, #a14818 100%) !important;
+    box-shadow: 0 6px 20px rgba(221, 105, 35, 0.5) !important;
+    transform: translateY(-2px) !important;
+}
+
+.tab-content .ml-pro-cta .button-primary:active {
+    transform: translateY(0) !important;
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ==========================================================================
+   UPGRADE COMPARISON TABLE
+   ========================================================================== */
+.ml-upgrade-content {
+    padding: 20px 0;
+}
+
+.ml-feat-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ml-feat-table, .ml-feat-table th, .ml-feat-table td {
+    border: 1px solid #e0e0e0;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.ml-feat-table th {
+    font-size: 1.1em;
+    padding: 20px;
+    background-color: white;
+}
+
+.ml-feat-table th h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #1d2327;
+}
+
+.ml-feat-table th h3 {
+    margin: 5px 0 0 0;
+    font-size: 1.4em;
+    color: #646970;
+    font-weight: normal;
+}
+
+.ml-feat-table td {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.ml-feat-table th.ml-dark-blue {
+    background-color: #29375B;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.ml-feat-table th.ml-orange {
+    background-color: #dd6923;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ml-feat-table th.ml-dark-blue.text-white,
+.ml-feat-table th.ml-orange.text-white {
+    color: white;
+}
+
+.ml-installed-status {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666666;
+}
+
+.ml-upgrade-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #dd6923 0%, #b8571c 100%);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(221, 105, 35, 0.3);
+}
+
+.ml-upgrade-link:hover {
+    background: linear-gradient(135deg, #c55a1e 0%, #a14818 100%);
+    box-shadow: 0 4px 8px rgba(221, 105, 35, 0.4);
+    transform: translateY(-1px);
+}
+
+.ml-feat-table h4 {
+    font-size: 1.3em;
+    line-height: 1.2;
+    margin: 0 0 8px 0;
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.ml-feat-table p {
+    color: #646970;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+td .ml-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+td .ml-dot.available {
+    background: #dd6923;
+}
+
+td .ml-dot.unavailable {
+    background: #ddd;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 768px) {
+    .ml-lightbox-header {
+        padding: 20px;
+    }
+
+    .ml-lightbox-header h1 {
+        font-size: 2em;
+    }
+
+    .nav-tab {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+
+    .tab-content .form-table th {
+        width: auto;
+        display: block;
+        padding: 10px 0 5px 0;
+        background: none;
+    }
+
+    .tab-content .form-table td {
+        display: block;
+        padding: 5px 0 15px 0;
+        background: none;
+    }
+
+    .tab-content .form-table td select {
+        min-width: 100%;
+    }
+
+    .ml-toggle-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .ml-toggle-content {
+        margin-right: 0;
+    }
+
+    .ml-toggle-control {
+        align-self: flex-end;
+    }
+
+    .ml-settings-field {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ml-settings-field-content {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .ml-settings-field-control {
+        min-width: auto;
+        max-width: none;
+        width: 100%;
+    }
+
+    .ml-settings-field-control select.ml-select2-manual-post-types,
+    .ml-settings-field-control select.ml-select2-post-types,
+    .ml-settings-field-control select.ml-select2-pages,
+    .ml-settings-field-control select.ml-select2-posts,
+    .ml-settings-field-control select.ml-select2-cpt,
+    .ml-settings-field-control textarea.ml-css-selectors-textarea {
+        max-width: 100%;
+    }
+
+    .ml-settings-field-control textarea.ml-css-selectors-textarea {
+        width: 100%;
+    }
+
+    .ml-color-inline {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .ml-color-field {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 120px;
+    }
+
+    .ml-how-to-toggle summary {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .ml-how-to-content {
+        padding: 12px;
+    }
+
+    .ml-how-to-content ol {
+        padding-left: 20px;
+    }
+
+    .ml-how-to-content pre {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .pro-header {
+        padding: 20px;
+    }
+
+    .pro-header h2 {
+        font-size: 2em;
+    }
+
+    .pro-header p {
+        font-size: 1em;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-item {
+        padding: 20px;
+    }
+
+    .pro-cta {
+        padding: 30px 20px;
+    }
+
+    .pro-cta h3 {
+        font-size: 1.5em;
+    }
+
+    .pro-upgrade-btn {
+        padding: 12px 30px !important;
+        font-size: 16px !important;
+    }
+}
